@@ -1,0 +1,144 @@
+// JavaScript for responsive navigation menu
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('menu-open');
+});
+
+// JavaScript functionality for the "About" page
+
+// Get references to the button and hidden content
+const readMoreBtn = document.getElementById('read-more-btn');
+const moreInfo = document.getElementById('more-info');
+
+// Toggle the visibility of the hidden content when the button is clicked
+readMoreBtn.addEventListener('click', () => {
+    if (moreInfo.classList.contains('hidden')) {
+        moreInfo.classList.remove('hidden');
+        readMoreBtn.textContent = 'Read Less';
+    } else {
+        moreInfo.classList.add('hidden');
+        readMoreBtn.textContent = 'Read More';
+    }
+});
+
+// JavaScript functionality for the "Accommodation" page
+
+// Get references to all accommodation cards
+const accommodationCards = document.querySelectorAll('.accommodation-card');
+
+// Add a click event listener to each card
+accommodationCards.forEach(card => {
+    card.addEventListener('click', () => {
+        // Get the data-accommodation attribute of the clicked card
+        const accommodationType = card.getAttribute('data-accommodation');
+        
+        // You can perform actions based on the accommodation type here
+        // For example, you can open a modal or navigate to a booking page
+        
+        // For now, let's just log the selected accommodation type
+        console.log(`Selected accommodation: ${accommodationType}`);
+    });
+});
+
+// JavaScript functionality for the "Dining" page
+
+// Get references to all dining cards
+const diningCards = document.querySelectorAll('.dining-card');
+
+// Add a click event listener to each card
+diningCards.forEach(card => {
+    card.addEventListener('click', () => {
+        // Get the data-dining attribute of the clicked card
+        const diningOption = card.getAttribute('data-dining');
+        
+        // You can perform actions based on the dining option here
+        // For example, you can open a menu modal or navigate to a menu page
+        
+        // For now, let's just log the selected dining option
+        console.log(`Selected dining option: ${diningOption}`);
+    });
+});
+
+// JavaScript functionality for the "Activities" page
+
+// Get references to all activity cards
+const activityCards = document.querySelectorAll('.activity-card');
+
+// Add a click event listener to each card
+activityCards.forEach(card => {
+    card.addEventListener('click', () => {
+        // Get the data-activity attribute of the clicked card
+        const activityType = card.getAttribute('data-activity');
+        
+        // You can perform actions based on the activity type here
+        // For example, you can open a modal with details about the activity
+        
+        // For now, let's just log the selected activity type
+        console.log(`Selected activity: ${activityType}`);
+    });
+});
+
+// JavaScript functionality for the "Gallery" page
+
+// Get references to all gallery images
+const galleryImages = document.querySelectorAll('.gallery-item img');
+
+// Add a click event listener to each image
+galleryImages.forEach(image => {
+    image.addEventListener('click', () => {
+        // You can perform actions based on the clicked image here
+        // For example, you can open a modal with a larger view of the image
+        
+        // For now, let's just log the clicked image's alt text
+        console.log(`Clicked image: ${image.alt}`);
+    });
+});
+
+// JavaScript functionality for the "Contact" page
+
+// Get the contact form element
+const contactForm = document.getElementById('contactForm');
+
+// Add a submit event listener to the form
+contactForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    // You can add code here to handle the form submission, such as sending data to a server
+
+    // For this example, let's just log the form data
+    const formData = new FormData(contactForm);
+    formData.forEach((value, key) => {
+        console.log(`${key}: ${value}`);
+    });
+
+    // Optionally, you can display a success message or redirect the user
+    // to a thank you page after form submission
+});
+
+// JavaScript functionality for the "Booking" page
+
+// Get the booking form element
+const bookingForm = document.getElementById('bookingForm');
+
+// Add a submit event listener to the form
+bookingForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    // You can add code here to handle the form submission, such as sending data to a server
+
+    // For this example, let's just log the form data
+    const formData = new FormData(bookingForm);
+    formData.forEach((value, key) => {
+        console.log(`${key}: ${value}`);
+    });
+
+    // Optionally, you can display a success message or redirect the user
+    // to a confirmation page after form submission
+});
+
+
+
+
